@@ -8,13 +8,15 @@ class TextFormByField extends StatelessWidget {
   final String? hinnt;
   Icon? icon;
   Widget? row;
+  bool secure;
+  int? lines;
   Key? key;
 
   final String? Function(String?)? validator;
   final Function(String?)? onSaved;
 
   TextFormByField(
-      {this.key,this.color,this.hinnt, this.hint, this.validator, this.onSaved, this.inputTxt,this.icon,this.row});
+      {this.key,this.color,this.lines,required this.secure,this.hinnt, this.hint, this.validator, this.onSaved, this.inputTxt,this.icon,this.row});
 
   @override
   Widget build(BuildContext context) {
@@ -54,7 +56,9 @@ class TextFormByField extends StatelessWidget {
             const TextStyle(fontWeight: FontWeight.bold, color: kwhite),
           ),
           keyboardType: inputTxt,
+          maxLines:lines ,
           validator: validator,
+          obscureText: lines==1?secure:!secure,
           onSaved: onSaved),
     );
   }

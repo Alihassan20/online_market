@@ -46,6 +46,7 @@ class PayView extends StatelessWidget {
                 ),
               ),
               TextFormByField(
+                secure: false,
                 inputTxt: TextInputType.number,
                 hinnt: 'XXX-XXX-XXXX-XXXX',
                 color: Colors.black12,
@@ -64,6 +65,7 @@ class PayView extends StatelessWidget {
                         ),
                       ),
                       TextFormByField(
+                        secure: false,
                         inputTxt: TextInputType.datetime,
                         hinnt: 'mm/yy',
                         color: Colors.black12,
@@ -82,6 +84,7 @@ class PayView extends StatelessWidget {
                         ),
                       ),
                       TextFormByField(
+                        secure: false,
                         inputTxt: TextInputType.number,
                         hinnt: 'XXX',
                         color: Colors.black12,

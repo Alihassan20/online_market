@@ -27,9 +27,12 @@ class SignUpScreen extends StatelessWidget {
             padding:  EdgeInsets.only(top: sizeFromHeight(context, 8)),
             child: Column(
               children: [
-                TextFormByField(inputTxt:TextInputType.name,hint: 'Full name',validator: (v){},onSaved: (v){},),
-                TextFormByField(inputTxt:TextInputType.emailAddress,hint: 'Email',validator: (v){},onSaved: (v){},),
-                TextFormByField(inputTxt:TextInputType.number,hint: 'Password',validator: (v){},onSaved: (v){},),
+                TextFormByField(secure: false,
+                  inputTxt:TextInputType.name,hint: 'Full name',validator: (v){},onSaved: (v){},),
+                TextFormByField(secure: false,
+                  inputTxt:TextInputType.emailAddress,hint: 'Email',validator: (v){},onSaved: (v){},),
+                TextFormByField(secure: false,
+                  inputTxt:TextInputType.number,hint: 'Password',validator: (v){},onSaved: (v){},),
                 CustomButton((){
                   MagicRouter.navigateAndPopAll( NavBarView(0));
                 },  Text("Validate",style: kbcstyle(context, 20, kPrimaryColor),),

@@ -6,6 +6,7 @@ import 'package:online_market/feature/home/view.dart';
 import '../../constant/color.dart';
 import '../cart/view.dart';
 import '../search/view.dart';
+import '../user_home_page/view.dart';
 
 class NavBarView extends StatefulWidget {
   int i;
@@ -22,7 +23,7 @@ class _NavBarViewState extends State<NavBarView> {
     HomeView(),
     SearchView(),
     Cart(),
-    Text('A'),
+    UserPage(),
   ];
 
   @override

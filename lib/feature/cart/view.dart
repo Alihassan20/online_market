@@ -167,9 +167,7 @@ class _CartState extends State<Cart> {
                                           onPressed: () {
                                             setState(() {
                                               num++;
-                                              int val = category_cart[index].Price;
-                                              category_cart[index].Price=num*20;
-                                              print(val*num);
+                                              category_cart[index].Price=category_cart[index].Price+20;
                                             });
                                           },
                                           icon: const FaIcon(
@@ -185,6 +183,9 @@ class _CartState extends State<Cart> {
                                             if (num > 1) {
                                               setState(() {
                                                 num--;
+                                                print(num);
+
+                                                category_cart[index].Price=category_cart[index].Price-20;
 
                                               });
                                             }
